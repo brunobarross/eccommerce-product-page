@@ -1,0 +1,256 @@
+:root{
+    --laranja: hsl(26, 100%, 55%);
+    --laranja-fraco: hsl(25, 100%, 94%);
+    --azul-escuro: hsl(220, 13%, 13%);
+    --cinza-escuro: hsl(219, 9%, 45%);
+    --cinza: hsl(220, 14%, 75%);
+    --cinza-claro: hsl(223, 64%, 98%);
+    --branco: hsl(0, 0%, 100%);
+    --preto-opaco: hsl(0, 0%, 0%);
+
+}
+
+
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+.menu__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--cinza);
+    padding: 2rem 0;
+}
+
+
+.menu__wrapper-navigation{
+    display: flex;
+    align-items: center;
+
+}
+
+.menu__wrapper-navigation .atalhos{
+    display: flex;
+    align-items: center;
+    margin-left: 4rem
+}
+
+
+.menu__wrapper-navigation .atalhos li + li{
+    margin-left: 2rem;
+}
+
+.menu__wrapper-navigation .atalhos li a{
+    display: block;
+    color: var(--cinza-escuro);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+
+.menu__wrapper-cart{
+    display: flex;
+    align-items: center;
+
+}
+
+
+
+.menu__wrapper-cart .profile{
+    max-width: 50px;
+    margin-left: 2rem;
+}
+
+
+
+
+
+/* produto*/
+
+
+.product__single{
+    padding: 80px 0;
+}
+
+
+.product__single-wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 128px;
+    align-items: center;
+}
+
+
+
+/* fotos do produto*/
+
+.product__single-wrapper-gallery{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.product__single-wrapper-gallery-picture img{
+    object-fit: cover;
+    width: 100%;
+    border-radius: 16px;
+}
+
+.product__single-wrapper-gallery-thumbs{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    padding-top: 2rem;
+}
+
+.product__single-wrapper-gallery-thumbs img{
+    border-radius: 16px;
+    transition: opacity .3s ease-in;
+}
+
+
+
+
+/* descrição do produto*/
+
+.product__single-description{
+
+}
+
+.product__single-description-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.product__single-description-text span{
+    color: var(--laranja);
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-size: .875rem;
+    padding-bottom: 1rem;
+}
+
+.product__single-description-text h2{
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--azul-escuro);
+    padding-bottom: 2rem;
+
+}
+
+.product__single-description-text p{
+    font-size: 1rem;
+    line-height: 160%;
+    color: var(--cinza-escuro);
+    padding-bottom: 1rem;
+
+}
+
+
+.product__single-description-price {
+    display: flex;
+    flex-direction: column;
+  
+}
+
+.product__single-description-price p{
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.product__single-description-price p span{
+    font-size: 1rem;
+    background-color: var(--laranja-fraco);
+    color: var(--laranja);
+    padding: .5rem;
+    margin-left: 1rem;
+    border-radius: 4px;
+}
+
+
+.product__single-description-price .old-price{
+    font-size: 1rem;
+    text-decoration: line-through;
+    color: var(--cinza);
+    padding-top: 1rem;
+}
+
+
+
+
+
+
+
+
+.product__single-wrapper-gallery-thumbs img.ativo{
+    opacity: 0.5;
+
+}
+
+
+
+
+
+
+.modal__container{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    background-color: rgba(0,0,0, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+
+.modal__galeria{
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+
+
+}
+
+.modal__galeria-foto{
+    display: flex;
+    justify-content: center;
+
+}
+
+.modal__galeria-foto img{
+    height: 500px;
+    width: 500px;
+    border-radius: 16px;
+}
+
+.modal__galeria-thumbs{
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 2rem;
+    padding-top: 2rem;
+    justify-content: center;
+}
+
+.modal__galeria-thumbs img{
+    border-radius: 16px;
+}
+
+
+.modal_-container.modalOn {
+    display: none;
+}
