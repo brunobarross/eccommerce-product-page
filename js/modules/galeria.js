@@ -3,14 +3,14 @@ export default function galeria(){
 
 const fotoGrande = document.querySelector(".product__single-wrapper-gallery-picture img");
 
-const fotoThumbs = document.querySelectorAll(".product__single-wrapper-gallery-thumbs img")
+const fotoThumbs = document.querySelectorAll(".product__single-wrapper-gallery-thumbs img");
 
 
 
 
 fotoThumbs.forEach((img, index)=>{
     img.addEventListener("click", trocaFoto); 
-})
+});
 
 
 function trocaFoto(evento){
